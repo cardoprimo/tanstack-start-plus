@@ -1,0 +1,44 @@
+{
+  "name": "tanstack-cabin",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@types/bun": "^1.2.2",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "drizzle-kit": "^0.30.4",
+    "tailwindcss": "^4.0.6",
+    "autoprefixer": "^10.4.20",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "vinxi": "^0.5.3",
+    "@tanstack/start": "^1.103.0",
+    "@tanstack/react-router": "^1.102.5",
+    "@tanstack/router-devtools": "^1.102.1",
+    "@clerk/tanstack-start": "0.9.4",
+    "zod": "^3.24.2",
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.39.3",
+    "tailwind-merge": "^2.6.0"
+  },
+  "trustedDependencies": [
+    "@clerk/shared",
+    "@parcel/watcher"
+  ]
+}
