@@ -32,9 +32,11 @@ export const Route = createRootRouteWithContext<{queryClient: QueryClient
 				name: "viewport",
 				content: "width=device-width, initial-scale=1",
 			},
-			{
-				title: "TanStack Starter+",
-			},
+			...seo({
+        title:
+          'TanStack Starter+ | Type-Safe, Client-First, Full-Stack React Framework',
+        description: `TanStack Start is a type-safe, client-first, full-stack React framework. `,
+      }), 
 		],
 		links: [
 			{ rel: "stylesheet", href: appCss },
