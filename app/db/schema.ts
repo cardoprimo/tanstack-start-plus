@@ -1,8 +1,9 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export const usersTable = sqliteTable("users_table", {
-	id: int().primaryKey({ autoIncrement: true }),
-	name: text().notNull(),
-	age: int().notNull(),
-	email: text().notNull().unique(),
+export const photosSchema = sqliteTable("photos", {
+  	id: int().primaryKey({ autoIncrement: true }),
+  	title: text().notNull(),
+  	height: int().notNull(),
+  	width: int().notNull(),
+    src: text().notNull().unique(),
 });

@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 
-import { Outlet, createRootRoute } from "@tanstack/react-router";
+import { Outlet, createRootRouteWithContext } from "@tanstack/react-router";
 import { createServerFn, Meta, Scripts } from "@tanstack/start";
 import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import type { ReactNode } from "react";
@@ -8,6 +8,7 @@ import { NotFound } from "@/components/base/NotFound";
 import { ClerkProvider } from "@clerk/tanstack-start";
 import { getAuth } from "@clerk/tanstack-start/server";
 import { getWebRequest } from "@tanstack/start/server";
+import type { QueryClient } from '@tanstack/react-query'
 
 import appCss from "@/styles/globals.css?url";
 import { DefaultCatchBoundary } from "@/components/base/DefaultCatchBoundary";
@@ -20,7 +21,8 @@ const fetchClerkAuth = createServerFn({ method: "GET" }).handler(async () => {
 	};
 });
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{queryClient: QueryClient
+}>()({
 	head: () => ({
 		meta: [
 			{
@@ -31,7 +33,7 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "TanStack Start Starter",
+				title: "TanStack Starter+",
 			},
 		],
 		links: [
