@@ -1,5 +1,5 @@
 # tanstack-start-plus
-Clerk, SQLite, Drizzle, Zod, TW
+TanStack Start, Router, Query, Clerk, SQLite, Drizzle, Zod, TW, TS
 
 To install dependencies:
 
