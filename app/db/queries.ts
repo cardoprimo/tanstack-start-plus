@@ -6,10 +6,10 @@ export const fetchPhotos = createServerFn({ method: 'GET' })
     console.info(`Fetching photos`)
     return <Array<PhotoType>>(await db.select().from('photos'))
     
-export const photosQueryOptions = () => queryOptions({
+export const photosQueryOptions = () => { return queryOptions({
   queryKey: ['photos'], 
   queryFn: () => fetchPhotos(), 
-})
+})} 
 
 const filterSchema = z.object({
   id: z.string().optional(),
@@ -47,6 +47,6 @@ export const fetchPhotoBy = createServerFn({ method: 'GET'})
     }
   });
     
-
-   
+} 
+  
  
