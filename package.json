@@ -29,7 +29,7 @@
     "react-dom": "^19.0.0",
     "vinxi": "^0.5.3",
     "@tanstack/start": "^1.103.0",
-    "@tanstack/query": "latest",
+    "@tanstack/react-query": "^5.66.3"
     "@tanstack/react-router": "^1.102.5",
     "@tanstack/router-devtools": "^1.102.1",
     "@clerk/tanstack-start": "0.9.4",
