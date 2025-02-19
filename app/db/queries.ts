@@ -5,7 +5,8 @@ export const fetchPhotos = createServerFn({ method: 'GET' })
   .handler(async () => {
     console.info(`Fetching photos`)
     return <Array<PhotoType>>(await db.select().from('photos'))
-  } 
+  });
+  
 export const photosQueryOptions = () =>  queryOptions({
   queryKey: ['photos'], 
   queryFn: () => fetchPhotos(), 
