@@ -9,7 +9,7 @@ import { ClerkProvider } from "@clerk/tanstack-start";
 import { getAuth } from "@clerk/tanstack-start/server";
 import { getWebRequest } from "@tanstack/start/server";
 import type { QueryClient } from '@tanstack/react-query'
-
+import { seo } from '@/utils/seo'
 import appCss from "@/styles/globals.css?url";
 import { DefaultCatchBoundary } from "@/components/base/DefaultCatchBoundary";
 
