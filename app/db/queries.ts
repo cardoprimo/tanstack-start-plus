@@ -2,7 +2,7 @@ import db from '@/db';
 import { PhotoType, PhotoSchema } from '@/types'; 
 import { queryOptions } from "@tanstack/react-query";
 import { createServerFn } from "@tanstack/start";
-import { z} from 'zod'; 
+import { z } from 'zod'; 
 
 
 export const fetchPhotos = createServerFn({ method: 'GET' })
