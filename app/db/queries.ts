@@ -1,13 +1,15 @@
 import db from '@/db'
-import PhotoType from '@/types'
+import { PhotoType, PhotoSchema } from '@/types'
 
 export const fetchPhotos = createServerFn({ method: 'GET' })
-  .handler(async () => {
+  .handler(async (): Promise<PhotoType[]> => {
     console.info(`Fetching photos`)
-    return <Array<PhotoType>>(await db.select().from('photos'))
+    const photos = await db.select().from('photos'); 
+    return PhotoSchema.array().parse(photos)
+    
   });
   
-export const photosQueryOptions = () =>  queryOptions({
+export const photosQueryOptions = (): QueryOptions<PhotoType[]> =>  queryOptions({
   queryKey: ['photos'], 
   queryFn: () => fetchPhotos(), 
 })
