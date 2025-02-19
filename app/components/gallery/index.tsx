@@ -9,8 +9,7 @@ export function Gallery() {
 	  <div>Hello "/gallery/ route"!</div>
 	  <ul>
 	  {photos.map((photo) => {
-	    return 
-	    (
+	    return (
 	    <li key={photo.id} >
 	    <div>{photo.title}</div>
 	    <img 
